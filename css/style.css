@@ -43,14 +43,14 @@ body {
     box-shadow: 0px 2px 4px rgb(173, 173, 173);
 }
 
-.header-top {
+.header-top, .header-bottom {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     padding: 25px;
 }
 
-.search, .shortcuts {
+.search, .shortcuts, .h-b-right {
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 25px;
@@ -77,6 +77,25 @@ body {
     width: 100px;
     height: 35px;
     color: white;
+}
+
+.h-b-left {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px 10px;
+}
+
+.h-b-left .icon {
+    grid-row-start: span 2;
+}
+
+.h-b-left .greeting {
+    margin-top: auto;
+}
+
+.h-b-left .name {
+    margin-bottom: auto;
 }
 
 .panel {
