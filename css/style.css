@@ -39,6 +39,46 @@ body {
     font-size: 28px;
 }
 
+.header {
+    box-shadow: 0px 2px 4px rgb(173, 173, 173);
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.search, .shortcuts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 25px;
+    align-items: center;
+}
+
+#searchbar {
+    appearance: none;
+    width: 600px;
+    background-color: lightgray;
+    border-radius: 25px;
+    padding: 5px;
+    border: none;
+}
+
+.shortcuts {
+    column-gap: 25px;
+}
+
+.h-b-right button {
+    border-radius: 25px;
+    border: none;
+    background-color: #3b82f6;
+    width: 100px;
+    height: 35px;
+    color: white;
+}
+
 .panel {
 
 }
