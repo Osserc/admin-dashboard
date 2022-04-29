@@ -99,5 +99,22 @@ body {
 }
 
 .panel {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
 
+.left-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+}
+
+.left-panel .title {
+    grid-column-start: span 2;
+}
+
+.right-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px 1fr;
 }
