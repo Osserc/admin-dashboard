@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -5,15 +10,17 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
+    font-family: Roboto, "Times New Roman";
+    font-size: 14px;
 }
 
 .header {
-    
+    box-shadow: 0px 2px 4px rgb(134, 134, 134);
 }
 
 .sidebar {
     grid-row-start: span 2;
-    background-color: rgb(65, 182, 255);
+    background-color: #1992d4;
     color: white;
     display: grid;
     grid-template-columns: 1fr;
@@ -40,7 +47,8 @@ body {
 }
 
 .header {
-    box-shadow: 0px 2px 4px rgb(173, 173, 173);
+    box-shadow: 0px 2px 4px rgb(134, 134, 134);
+    position: relative;
 }
 
 .header-top, .header-bottom {
@@ -60,7 +68,7 @@ body {
 #searchbar {
     appearance: none;
     width: 600px;
-    background-color: lightgray;
+    background-color: #e2e8f0;
     border-radius: 25px;
     padding: 5px;
     border: none;
@@ -73,17 +81,19 @@ body {
 .h-b-right button {
     border-radius: 25px;
     border: none;
-    background-color: #3b82f6;
+    background-color: #1992d4;
     width: 100px;
     height: 35px;
     color: white;
+    font-weight: bold;
 }
 
 .h-b-left {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    gap: 0px 10px;
+    gap: 0px 15px;
+    font-weight: bold;
 }
 
 .h-b-left .icon {
@@ -95,26 +105,99 @@ body {
 }
 
 .h-b-left .name {
-    margin-bottom: auto;
+    font-size: 24px;
 }
 
 .panel {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    background-color: #e2e8f0;
+    padding: 25px;
+    gap: 25px;
+}
+
+.panel .title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.panel .description {
+    color: #8b8b8b;
 }
 
 .left-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-template-rows: 25px 1fr 1fr 1fr;
+    gap: 25px;
 }
 
 .left-panel .title {
     grid-column-start: span 2;
 }
 
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    min-width: 75%;
+    min-height: 50%;
+}
+
+.project .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
 .right-panel {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr 50px 1fr;
+    grid-template-columns: 100%;
+    grid-template-rows: 25px 1fr 25px auto;
+    gap: 25px;
+}
+
+.right-panel .subject {
+    font-weight: bold;
+}
+
+.announcements, .trending {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 25px;
+    margin-bottom: auto;
+    border-radius: 25px;
+}
+
+hr {
+    width: 110%;
+    margin: 0;
+    align-self: center;
+    border: none;
+    height: 1px;
+    background-color: #ebebeb ;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto auto;
+}
+
+.trend .icon {
+    grid-row-start: span 2;
+}
+
+.trend .handle {
+    margin-top: auto;
+}
+
+.trend .description {
+    margin-bottom: auto;
 }
